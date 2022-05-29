@@ -1,0 +1,58 @@
+*{
+    margin: 0;
+}
+.color-line{
+    font-size: 4rem;
+    font-family: cursive; 
+    font-style: italic;
+    color: palevioletred;
+    text-decoration: underline;
+
+}
+
+.hid{
+    padding-top: 50%;
+    display: none;
+}
+
+body{
+    background-image: url('./img/main.jpg');
+    background-repeat: no-repeat;
+}
+
+.main-body{
+    display: flex;
+    margin: 6rem;
+}
+
+
+.side-text{
+    font-family: cursive;
+    font-style: italic;
+}
+
+h2{
+padding-left: 10rem;
+}
+
+img{
+    height: 250px;
+    padding-left: 16rem;
+}
+
+.water-pic{
+    padding-left: 8rem;
+    padding-right: 18%;
+    font-weight: 300;
+    font-family: cursive;
+    font-style: italic;
+    color: darkblue;
+}
+
+.others{
+    margin-top: 5rem;
+    padding: 1rem;
+    font-size: 4rem;
+    display: flex;
+    justify-content: space-between;
+}

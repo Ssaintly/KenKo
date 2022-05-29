@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Diet and Exercise</title>
+    <link rel="stylesheet" href="../static/dietexr.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  </head>
+  <body>
+    <div class="wrapper">
+      <h1>KenKo!</h1>
+      <div class="title-text">
+        <div class="title login">Let's Get Diet For You!!</div>
+        <div class="title signup">Ready For Some Exercise!</div>
+      </div>
+      <div class="form-container">
+        <div class="slide-controls">
+          <input type="radio" name="slide" id="login" checked>
+          <input type="radio" name="slide" id="signup">
+          <label for="login" class="slide login">Diet</label>
+          <label for="signup" class="slide signup">Exercise</label>
+          <div class="slider-tab"></div>
+        </div>
+        <div class="form-inner">
+          <form action="/info" class="login" method="POST">
+            <div class="field">
+              <input type="text" name="weight" placeholder="Weight" required>
+            </div>
+            <div class="field">
+              <input type="text" name="height" placeholder="Height" required>
+            </div>
+            <div class="field">
+              <input type="text" name="age" placeholder="Age" required>
+            </div>
+            <div class="field">
+              <input type="text" name="gender" placeholder="Gender(male, female)" required>
+            </div>
+            <div class="field">
+              <input type="text" name="dietType" placeholder="Diet-Type(Weight Loss, Weight Gain, Healthy)" required>
+            </div>
+            <div class="field">
+              <input type="text" name="dietTime" placeholder="Diet-Time(Breakfast, Lunch, Dinner)" required>
+            </div>
+            <div class="field">
+              <input type="text" name="category" placeholder="Veg or NonVeg" required>
+            </div>
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" name="form1" value="Let's Eat!">
+            </div>
+          </form>
+          
+
+
+          <form action="/info" class="signup" method="POST">
+            <div class="field">
+              <input type="text" name="weight" placeholder="Weight" required>
+            </div>
+            <div class="field">
+              <input type="text" name="height" placeholder="Height" required>
+            </div>
+            <div class="field">
+              <input type="text" name="age" placeholder="Age" required>
+            </div>
+            <div class="field">
+              <input type="text" name="gender" placeholder="Gender(male, female)" required>
+            </div>
+            <div class="field">
+              <input type="text" name="dietType" placeholder="Diet-Type(Weight Loss, Weight Gain, Healthy)" required>
+            </div>
+            
+            <div class="field btn">
+              <div class="btn-layer"></div>
+              <input type="submit" name="form2" value="Let's Go!!">
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+
+    <script>
+      const loginText = document.querySelector(".title-text .login");
+      const loginForm = document.querySelector("form.login");
+      const loginBtn = document.querySelector("label.login");
+      const signupBtn = document.querySelector("label.signup");
+      const signupLink = document.querySelector("form .signup-link a");
+      signupBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "-50%";
+        loginText.style.marginLeft = "-50%";
+      });
+      loginBtn.onclick = (()=>{
+        loginForm.style.marginLeft = "0%";
+        loginText.style.marginLeft = "0%";
+      });
+      signupLink.onclick = (()=>{
+        signupBtn.click();
+        return false;
+      });
+    </script>
+
+  </body>
+</html>
