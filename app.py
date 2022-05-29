@@ -147,7 +147,6 @@ def food_recommendation(wt, ht, age, gender, dietType, dietTime, Category ):
     j=j.reshape(-1,1)
 
 
-    print("chl rha h")
 
     #getting the indexes of k nearest neighbors for value j
     ans=neigh.kneighbors(j, return_distance=False)
